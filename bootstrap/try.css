@@ -1,0 +1,47 @@
+
+.navbar-brand{
+    font-weight: 1000;   
+}
+.nav-item1{
+    margin: 0rem 4rem 0 0;
+}
+.nav-item3{
+    margin: 0 4rem 0 0;
+}
+.nav-item4{
+    margin: 0 4rem 0 0;
+}
+.display-3{
+    margin: 3rem 0 0 0 ;
+    color: azure;
+    font-family: "Poppins", sans-serif;
+    font-weight: 1000;
+}
+.blockquote p{
+    font-family: "Poppins",sans-serif   ;
+    font-weight: 700;
+    color: azure;
+}
+.blockquote-footer span{
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: azure;
+}
+.card-body{
+    color: #1b1919;
+    font-family: "Poppins",sans-serif;
+    
+}
+.custom-card {
+    background-color:transparent !important; 
+    border: none !important; 
+}
+.custom-card .card-img-top {
+    object-fit: cover; 
+    background-color: transparent !important; 
+}   
+.custom-card .card-body {
+    color: white; /* Set text color to white */
+    font-family: 'Poppins', sans-serif; /* Set font family to Poppins */
+    border: none;
+}
