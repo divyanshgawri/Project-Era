@@ -41,7 +41,18 @@
     background-color: transparent !important; 
 }   
 .custom-card .card-body {
-    color: white; /* Set text color to white */
-    font-family: 'Poppins', sans-serif; /* Set font family to Poppins */
+    color: white; 
+    font-family: 'Poppins', sans-serif; 
     border: none;
+}
+.custom-navbar {
+    background-color: lightblue; /* Set background color of the navbar */
+}
+.custom-navbar .navbar-brand {
+    color: white; /* Set color of the navbar brand (logo/text) */
+    font-family: 'Poppins', sans-serif !important; /* Set font family for navbar brand */
+}
+.custom-navbar .navbar-nav .nav-link {
+    color: white !important; /* Set color of the navbar links */
+    font-family: 'Poppins', sans-serif; /* Set font family for navbar links */
 }
