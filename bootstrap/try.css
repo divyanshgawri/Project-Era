@@ -1,4 +1,6 @@
-
+.body{
+    background-color: #1a1a1a;
+}
 .navbar-brand{
     font-weight: 1000;   
 }
@@ -46,13 +48,23 @@
     border: none;
 }
 .custom-navbar {
-    background-color: lightblue; /* Set background color of the navbar */
+    background-color: #42858C !important;
 }
+.custom-navbar .navbar-nav .nav-link,
 .custom-navbar .navbar-brand {
-    color: white; /* Set color of the navbar brand (logo/text) */
-    font-family: 'Poppins', sans-serif !important; /* Set font family for navbar brand */
+    color: #FBFBFF !important; 
+    font-family: 'Poppins', sans-serif !important; 
+    font-weight: 700;
+        
 }
-.custom-navbar .navbar-nav .nav-link {
-    color: white !important; /* Set color of the navbar links */
-    font-family: 'Poppins', sans-serif; /* Set font family for navbar links */
+.carousel-item img {
+    width: 330px;
+    height: 400px;
+    object-fit: contain; 
+}
+.card-text1{
+    color: #FBFBFF ;
+    width: 19rem;
+    margin-top: 2rem ;
+    font-weight: 600;
 }
