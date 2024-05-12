@@ -23,8 +23,15 @@
     font-weight: 700;
         
 }
-.custom-card img{
-    height: 3rem;
-    width: 3rem;
-    object-fit: contain;
+.custom-card .card-img-top {
+    height: 18rem;
+    width: auto; 
+    object-fit: contain; 
+    background-color: transparent !important;
+    margin-top: 2rem; 
+}
+
+.custom-card img {
+    height: 100%; 
+    width: 100%; 
 }
