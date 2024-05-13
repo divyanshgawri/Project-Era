@@ -1,0 +1,53 @@
+.body{
+    background-color: #1a1a1a;
+}
+.navbar-brand{
+    font-weight: 1000;   
+}
+.nav-item1{
+    margin: 0rem 4rem 0 0;
+}
+.nav-item3{
+    margin: 0 4rem 0 0;
+}
+.nav-item4{
+    margin: 0 4rem 0 0;
+}
+.custom-navbar {
+    background-color: #42858C !important;
+}
+.custom-navbar .navbar-nav .nav-link,
+.custom-navbar .navbar-brand {
+    color: #FBFBFF !important; 
+    font-family: 'Poppins', sans-serif !important; 
+    font-weight: 700;
+        
+}
+.heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FBFBFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 2rem; */
+}
+.form-group{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FBFBFF;
+}
+.image_text{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FBFBFF;
+}
+.in{
+    color: #FBFBFF ;
+    margin-left: 0.5rem;
+}
+.textu{
+    display: flex;
+    justify-content: center;
+    
+}

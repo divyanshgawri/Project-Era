@@ -15,11 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from projectera_main import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',views.index,name='index'),
     path('trr',views.python,name='trr'),
-    path('proj1',views.proj1python,name='proj1')
+    path('proj1',views.proj1python,name='proj1'),
+    path('upload_proj',views.upload_proj1,name='upload_proj')
 ]
