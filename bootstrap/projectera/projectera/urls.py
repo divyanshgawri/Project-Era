@@ -20,5 +20,6 @@ from projectera_main import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',views.index,name='index'),
-    path('trr',views.python,name='trr')
+    path('trr',views.python,name='trr'),
+    path('proj1',views.proj1python,name='proj1')
 ]
