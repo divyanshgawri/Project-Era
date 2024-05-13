@@ -11,54 +11,55 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
-<title>Document</title>
+<title>Project Upload</title>
 </head>
 <body class="bg-dark">
        {% include "header.html" %}
-    <div class="container d-flex align-items-center justify-content-center">
+       <div class="container d-flex align-items-center justify-content-center">
         <div class="row">
-            <div class="col-lg-5 col-md-auto col-sm-auto">
+            <form action="upload_proj/" method = "post" class="container-fluid">
+                {% csrf_token %}
+            <div class="col-lg-12 col-md-8 col-sm-12">
                 <label for="name" class="heading mt-5">Name</label>
-                <input name = "name" type="text" class="form-control mt-3" placeholder="First name">
-              </div>
-              <div class="col-lg-5">
+                <input name="name" type="text" class="form-control mt-3" placeholder="Your Name">
+            </div>
+            <div class="col-lg-12 col-md-8 col-sm-12">
                 <label for="title" class="heading mt-5">Title</label>
-                <input name = "title" type="text" class="form-control mt-3" placeholder="First name">
-              </div>
-              <div class="col-lg-9">
+                <input name="title" type="text" class="form-control mt-3" placeholder="Title for your project">
+            </div>
+            <div class="col-lg-12 col-md-8 col-sm-12">
                 <label for="description" class="heading mt-5">Description:</label><br>
-                <textarea id="description" class="heading ml-5" name="description" rows="9" cols="50" required></textarea><br><br>
-              </div>
-              <div class="form-group col-lg-9 mt-5">
+                <textarea id="description" class="form-control mt-3" name="description" rows="9" cols="50" placeholder="Describe Your Project Here" required></textarea><br><br>
+            </div>
+            <div class="form-group col-lg-12 col-md-8 col-sm-12 mt-5">
                 <label for="exampleFormControlSelect1">Select languages Below</label>
                 <select class="form-control mt-3" id="exampleFormControlSelect1">
-                  <option value="Python">Python</option>
-                  <option value="Ruby">Ruby</option>
-                  <option value="C++">C++</option>
-                  <option value="ReactJS">ReactJS</option>
-                  <option value="Java">Java</option>
-                  <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="C++">C++</option>
+                    <option value="ReactJS">ReactJS</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
                 </select>
-              </div>
-              
-              <div class="col-lg-9 mt-5">
-              <label for="image1" class="image_text">Upload Image 1:</label><br>
-              <input type="file" class="in mt-3" id="image1" name="image1" accept="image/*" required><br><br>
             </div>
-              <div class="col-lg-12 mt-5">
-              <label for="image2" class="image_text">Upload Image 2:</label><br>
-              <input class="in mt-3" type="file" id="image2" name="image2" accept="image/*" required><br><br>
+            <div class="col-lg-12 col-md-8 col-sm-12 mt-5">
+                <label for="image1" class="image_text">Upload Image 1:</label><br>
+                <input type="file" class="form-control mt-3" id="image1" name="image1" accept="image/*" required><br><br>
             </div>
-            <div class="col-lg-12 mt-5">
-            <label for="project_zip" class="image_text">Upload Project Zip File:</label><br>
-            <input type="file" class="in mt-3" id="project_zip" name="project_zip" accept=".zip" required><br><br>
+            <div class="col-lg-12 col-md-8 col-sm-12 mt-5">
+                <label for="image2" class="image_text">Upload Image 2:</label><br>
+                <input class="form-control mt-3" type="file" id="image2" name="image2" accept="image/*" required><br><br>
             </div>
-            <div class="col-lg-4 d-flex align-items-center">
-            <label for="done">Submit</label>
-            <input type="submit" name ="done" value="Submit">
-            </div>   
-    </div></div> 
-        
+            <div class="col-lg-12 col-md-8 col-sm-12 mt-4">
+                <label for="project_zip" class="image_text">Upload Project Zip File:</label><br>
+                <input type="file" class="form-control mt-3" id="project_zip" name="project_zip" accept=".zip" required><br><br>
+            </div>
+            <div class="col-lg-12 col-md-4 col-sm-6 mt-3 mb-3 d-flex justify-content-center">
+                <input type="submit" name="done" class="btn btn-primary" value="Submit">
+            </div>
+        </div>
+    </div>
+</form>
 
 
 </body>
