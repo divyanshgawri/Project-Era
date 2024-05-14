@@ -17,7 +17,8 @@
        {% include "header.html" %}
        <div class="container d-flex align-items-center justify-content-center">
         <div class="row">
-            <form action="upload_proj" method = "POST" class="container-fluid">
+           
+            <form action= "{% url 'upload_proj' %}" method = "POST" enctype="multipart/form-data" class="container-fluid">
                 {% csrf_token %}
             <div class="col-lg-12 col-md-8 col-sm-12">
                 <label for="user_name" class="heading mt-5">Name</label>

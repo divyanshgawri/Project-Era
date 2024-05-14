@@ -12,9 +12,9 @@ def upload_proj1(request):
         proj_title= request.POST.get('proj_title')
         proj_desc = request.POST.get('proj_desc')
         # choose = request.POST.get('choose')
-        image1 = request.POST.get('image1')
-        image2 = request.POST.get('image2')
-        project_zip = request.POST.get('project_zip')
+        image1 = request.FILES.get('image1')  
+        image2 = request.FILES.get('image2')  
+        project_zip = request.FILES.get('project_zip')
         p1 = Projects()
         p1.names = user_name
         p1.titles = proj_title
