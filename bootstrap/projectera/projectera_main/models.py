@@ -8,4 +8,10 @@ class Projects(models.Model):
     image2 = models.ImageField(upload_to="project_main/images",default="")
     project_zip = models.FileField(upload_to="project_main_file",null=True) 
     
-# Create your models here.
+class User(models.Model):
+    names = models.CharField(max_length=30)
+    titles = models.CharField(max_length=40)
+    descriptions = models.CharField(max_length=500)
+    images1 = models.ImageField(upload_to="User/images",default="")
+    images2 = models.ImageField(upload_to="project_main_user/images",default="")
+    project_zips = models.FileField(upload_to="project_main_file",null=True) 
