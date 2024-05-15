@@ -19,7 +19,7 @@ from django.urls import path,include
 from projectera_main import views
 from django.conf import settings
 from django.conf.urls.static import  static
-urlpatterns = [
+urlpatterns = [ 
     path("admin/", admin.site.urls),
     path('',views.index,name='index'),
     path('trr',views.python,name='trr'),
