@@ -1,6 +1,8 @@
 from django.shortcuts import render,HttpResponse,redirect
 from .models import Projects
 from .models import User
+from django.utils.http import urlencode
+from django.utils.crypto import get_random_string
 def index(request):
     return render(request,'index.html')
 def python(request):
@@ -15,27 +17,36 @@ def proj1python(request):
 def uploadForm(request):
     return render(request,'upload.html')
 
-def upload_proj1(request):
-    if request.method == "POST":
-        p1 =Projects()
-        user_name = request.POST.get('user_name')
-        proj_title= request.POST.get('proj_title')
-        proj_desc = request.POST.get('proj_desc')
-        # choose = request.POST.get('choose')
-        if len(request.FILES) !=0:
-            
-            image1 = request.FILES.get('image1')  
-            image2 = request.FILES.get('image2')  
-            project_zip = request.FILES.get('project_zip')
-       
-        
-        p1.save()
-        #redirect("trr")
-        tdata=Projects.objects.all()
-        return redirect("index")
+from django.shortcuts import render, redirect
+from .models import Projects
 
+def upload_proj(request):
+    if request.method == "POST":
+        user_name = request.POST.get('user_name')
+        proj_title = request.POST.get('proj_title')
+        proj_desc = request.POST.get('description')
+        image1 = request.FILES.get('image1')
+        image2 = request.FILES.get('image2')
+        project_zip = request.FILES.get('project_zip')
+        project_number = get_random_string(length=8)
         
-    return render(request,'upload',{'tdata':tdata})
+        p1 = Projects(
+            name=user_name,
+            title=proj_title,
+            description=proj_desc,
+            image1=image1,
+            image2=image2,
+            project_zip=project_zip,
+            project_number = project_number
+        )
+        p1.save()
+        #oiii = p1.objects.all()
+        query_string = urlencode({'projects_number': project_number})
+        url = f"/?{query_string}"
+        return redirect(url)
+
+    return render(request, 'upload.html')
+
 
 
     
