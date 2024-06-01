@@ -25,5 +25,6 @@ urlpatterns = [
     path('trr',views.python,name='trr'),
     path('proj1',views.proj1python,name='proj1'),
     path('upload',include('projectera_main.urls')),
-    
+    path('login/',views.login,name="login"),
+    path('register/',views.register,name="register")
 ]+ static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

@@ -13,7 +13,7 @@
 </head>
 <body class="bg-dark">
     {% include "header.html" %}
-    <div class="container d-flex align-items-center justify-content-center">
+    <div class="container-fluid d-flex align-items-center justify-content-center">
         <div class="row">
             <form action="{% url 'upload_proj' %}" method="POST" enctype="multipart/form-data" class="container-fluid">
                 {% csrf_token %}
